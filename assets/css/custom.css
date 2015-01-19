@@ -1,0 +1,499 @@
+/****MODULES*****/
+body {
+  background-color: orange;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+  /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(left, #3b5166, #758493);
+  color: #ddd;
+  padding: 0 2em;
+  font-family: helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  margin: .5em 0;
+  text-transform: lowercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+p a {
+  color: #fff;
+}
+
+p strong,
+p b {
+  color: #fff;
+}
+
+abbr {
+  cursor: help;
+}
+
+::selection {
+  background: #555;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #555;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #555;
+  color: #fff;
+}
+
+.intro {
+  position: relative;
+  max-width: 720px;
+}
+
+.intro .info {
+  width: 2em;
+  height: 12px;
+  margin: 0 4px 0 0;
+  padding: 4px 4px 2px 4px;
+  font-weight: 700;
+  color: #333;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.intro .info.open {
+  color: #fff;
+}
+
+.intro .info .about {
+  opacity: 0;
+  width: 400px;
+  padding: 1.5em 1em 0 1em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  background: rgba(35, 35, 35, 0.8);
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  position: absolute;
+  right: -160px;
+  top: -18px;
+  z-index: 400;
+}
+
+.intro .info.open .about {
+  opacity: 1;
+}
+
+.intro .info .close {
+  opacity: 0;
+  display: block;
+  width: auto;
+  padding: 2px 6px;
+  background: rgba(200, 200, 200, 0.4);
+  color: #fff;
+  font-size: smaller;
+  position: absolute;
+  top: -1px;
+  z-index: 700;
+}
+
+.intro .info.open .close {
+  opacity: 1;
+}
+
+#other {
+  clear: both;
+  position: fixed;
+  top: 4%;
+  right: 2%;
+  z-index: 1001;
+  text-align: right;
+}
+
+#other ul li {
+  list-style-type: none;
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  opacity: .8;
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  -ms-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+#other ul li:hover {
+  opacity: 1;
+}
+
+#other ul li a {
+  display: block;
+  width: 100%;
+  margin-right: 5px;
+  padding: 5px 10px 5px 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-width: 0 1px 1px 0;
+  color: #ddd;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  -ms-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+#other ul li:hover a {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.05);
+  text-decoration: none;
+}
+
+#other .credit {
+  padding-top: 1em;
+}
+
+.instructions,
+.warning {
+  max-width: 800px;
+  padding-right: 146px;
+}
+
+.warning {
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.warning a {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+code {
+  white-space: nowrap;
+}
+
+body {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: orange;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+  width: 100%;
+  background-image: none;
+}
+
+.instructions {
+  font-size: 1.2em;
+}
+
+/* hide warning when browser passes the test */
+.cssfilters .no-cssfilters {
+  display: none;
+}
+
+/* make warning more noticable when test fails */
+.no-cssfilters .no-cssfilters {
+  color: #f99;
+}
+
+div.layer {
+  /* background: #fff;*/
+  color: #000;
+  position: absolute;
+  /*border: 10px solid #333;
+  border-radius: 20px;
+  */
+  /*
+   * Transitioning the blur kicks this to the GPU, the .05s is a flood control
+   * of sorts. Without a delay you're back in the same position as before with
+   * too many paints.
+   *
+   * @see jankfree.org
+   */
+  -webkit-transition: -webkit-filter .05s linear;
+  -moz-transition: -moz-filter .05s linear;
+  transition: filter .05s linear;
+}
+
+div.layer span {
+  display: block;
+  width: 100px;
+  margin: 20px auto 0;
+  font-size: 2em;
+}
+
+div.back {
+  width: 120%;
+  margin-left: 0;
+  height: 100%;
+  background: url("assets/images/third.png") no-repeat center/contain;
+  top: -30%;
+  -webkit-transform: translateX(-100px);
+  -moz-transform: translateX(-100px);
+  transform: translateX(-100px);
+  z-index: 1;
+}
+
+div.middle {
+  width: 140%;
+  margin-left: -20%;
+  height: 140%;
+  background: url("assets/images/second.png") no-repeat center/contain;
+  top: -30%;
+  -webkit-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
+  transform: translateX(-200px);
+  z-index: 2;
+}
+
+div.front {
+  width: 180%;
+  height: 180%;
+  background: url("assets/images/first.png") no-repeat center/contain;
+  margin-left: -40%;
+  top: -30%;
+  -webkit-transform: translateX(-300px);
+  -moz-transform: translateX(-300px);
+  transform: translateX(-300px);
+  z-index: 3;
+}
+
+body {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  width: 100%;
+  background-image: none;
+  background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #000000 0%, #49280e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #49280e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #49280e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #000000 0%, #49280e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #000000 0%, #49280e 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #000000 0%, #49280e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#49280e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.instructions {
+  font-size: 1.2em;
+}
+
+/* hide warning when browser passes the test */
+.cssfilters .no-cssfilters {
+  display: none;
+}
+
+/* make warning more noticable when test fails */
+.no-cssfilters .no-cssfilters {
+  color: #f99;
+}
+
+div.blur {
+  width: 5%;
+  height: 13%;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  background-color: #e45a15;
+  position: absolute;
+}
+
+div.first {
+  top: 30%;
+  left: 44%;
+  opacity: .5;
+}
+
+div.layer span {
+  display: block;
+  width: 100px;
+  margin: 20px auto 0;
+  font-size: 2em;
+}
+
+div.back {
+  width: 120%;
+  margin-left: 0;
+  height: 100%;
+  background: url("../images/third.png") no-repeat center/contain;
+  top: -30%;
+  -webkit-transform: translateX(-100px);
+  -moz-transform: translateX(-100px);
+  transform: translateX(-100px);
+  z-index: 1;
+}
+
+div.middle {
+  width: 80%;
+  margin-left: 20%;
+  height: 80%;
+  /*background:url('../images/second.png') no-repeat center/contain;*/
+  top: -30%;
+  -webkit-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
+  transform: translateX(-200px);
+  z-index: 2;
+}
+
+div.front {
+  width: 100%;
+  height: 100%;
+  background: url("../images/first.png") no-repeat center/contain;
+  position: absolute;
+  margin-left: 50%;
+  -webkit-transform: translateX(-300px);
+  -moz-transform: translateX(-300px);
+  transform: translateX(-300px);
+  z-index: 3;
+  top: 0;
+  opacity: 0;
+  -webkit-animation: flicker 5s linear 1.5s forwards;
+  animation: flicker 5s linear 1.5s forwards;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.02;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  35% {
+    opacity: 0.2;
+  }
+  37% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+div.speck {
+  width: 3px;
+  height: 3px;
+  opacity: .3;
+  border-radius: 50px;
+  position: absolute;
+  top: -10px;
+  right: 10%;
+  background-color: #ffd167;
+  -webkit-animation: falling infinite 30s linear;
+  animation: falling infinite 30s linear;
+  z-index: 100;
+}
+
+.speck.two {
+  -webkit-animation: falling infinite 45s linear 1.5s;
+  animation: falling infinite 45s linear 1.5s;
+  right: 45%;
+}
+
+.speck.three {
+  -webkit-animation: falling infinite 33s linear 5s;
+  animation: falling infinite 33s linear 5s;
+  right: 30%;
+}
+
+.speck.four {
+  -webkit-animation: falling infinite 28s linear 2.5s;
+  animation: falling infinite 28s linear 2.5s;
+  right: 19%;
+}
+
+@-webkit-keyframes falling {
+  0% {
+    top: -2%;
+    -webkit-transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-50px);
+  }
+  50% {
+    -webkit-transform: translateX(50px);
+  }
+  75% {
+    -webkit-transform: translateX(30px);
+  }
+  100% {
+    top: 101%;
+    -webkit-transform: translateX(-10px);
+  }
+}
+@keyframes falling {
+  0% {
+    top: -2%;
+    -webkit-transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-50px);
+  }
+  50% {
+    -webkit-transform: translateX(50px);
+  }
+  75% {
+    -webkit-transform: translateX(30px);
+  }
+  100% {
+    top: 101%;
+    -webkit-transform: translateX(-10px);
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */

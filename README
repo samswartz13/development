@@ -1,0 +1,10 @@
+README
+Set up development environment
+
+1. Navigate to project file in terminal:	cd myfile/myProject
+2. Pull down repo into this project file
+3. Run npm install
+4. Run bower install
+	a) If this doesn't work install Bower globally:		npm install -g bower
+5. Run gulp: this should open new tab, start up browsersync and start watching your files
+6. To create a deployable build - Run gulp build in a new terminal tab

@@ -1,0 +1,87 @@
+body {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: orange;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-perspective: 600px;
+       -moz-perspective: 600px;
+            perspective: 600px;
+    width:100%;
+    background-image: none;
+  }
+
+
+  .instructions {
+    font-size: 1.2em;
+  }
+
+  /* hide warning when browser passes the test */
+  .cssfilters .no-cssfilters {display: none; }
+
+  /* make warning more noticable when test fails */
+  .no-cssfilters .no-cssfilters {
+    color: #f99;
+  }
+
+  div.layer {
+   /* background: #fff;*/
+    color: #000;
+    position: absolute;
+    /*border: 10px solid #333;
+    border-radius: 20px;
+    */
+    /*
+     * Transitioning the blur kicks this to the GPU, the .05s is a flood control
+     * of sorts. Without a delay you're back in the same position as before with
+     * too many paints.
+     *
+     * @see jankfree.org
+     */
+    -webkit-transition: -webkit-filter .05s linear;
+       -moz-transition:    -moz-filter .05s linear;
+            transition:         filter .05s linear;
+	}
+  div.layer span {
+    display: block;
+    width: 100px;
+    margin: 20px auto 0;
+    font-size: 2em;
+  }
+
+  div.back {
+    width: 120%;
+    margin-left: 0;
+    height: 100%;
+    background:url('assets/images/third.png') no-repeat center/contain;
+    top: -30%;
+    -webkit-transform: translateX(-100px);
+       -moz-transform: translateX(-100px);
+            transform: translateX(-100px);
+    z-index: 1;
+  }
+  div.middle {
+    width: 140%;
+    margin-left: -20%;
+    height: 140%;
+    background:url('assets/images/second.png') no-repeat center/contain;
+    top: -30%;
+    -webkit-transform: translateX(-200px);
+       -moz-transform: translateX(-200px);
+            transform: translateX(-200px);
+    z-index: 2;
+  }
+  div.front {
+    width: 180%;
+    height: 180%;
+    background:url('assets/images/first.png') no-repeat center/contain;
+    margin-left: -40%;
+    top: -30%;
+    -webkit-transform: translateX(-300px);
+       -moz-transform: translateX(-300px);
+            transform: translateX(-300px);
+    z-index: 3;
+
+  }

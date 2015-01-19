@@ -1,0 +1,22 @@
+{
+  "name": "Portfolio",
+  "version": "0.0.0",
+  "authors": [
+    "samswartz13 <samantha.r.swartz@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.2.0"
+  }
+}
