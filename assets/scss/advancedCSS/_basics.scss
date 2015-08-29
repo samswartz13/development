@@ -1,0 +1,286 @@
+//******************* Site Structure Code ******************//
+nav {
+  background-color: #2B2B2B;
+  z-index: 300;
+
+  ul {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 50px;
+    li {
+      float: left;
+      padding: 0 30px;
+      line-height: 50px;
+      list-style: none;
+      text-transform: uppercase;
+      &.brand {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+        padding-left: 0;
+      }
+      a {
+        color: white;
+        opacity: .8;
+        text-decoration: none;
+        transition: opacity .13s linear;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+h3, h4 {
+  margin-bottom: 10px;
+}
+p {
+  max-width:600px;
+  // margin: 5px 0 10px;
+}
+
+section:not(.screen) {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  padding-top: 50px;
+  border-top: solid 2px rgba(#E4E4E4, .5);
+}
+em {
+  font-weight: 600;
+}
+.screen {
+	width: 50%;
+	float: left;
+	margin-right: 2%;
+  height: 100%;
+  text-align: center;
+}
+aside {
+	width: 48%;
+	float: right;
+  height: 100%;
+
+}
+pre.prettyprint {
+  border: 0 !important;
+  margin: 0;
+}
+.example {
+  display: table-cell;
+  height: 100%;
+  width: 100vw;
+  padding: 15px;
+  background-color: white;
+  border: solid 1px #F1F1F1;
+    &:after {
+  	content: '';
+  	clear: both;
+    display: block;
+  }
+}
+.caps {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+body {
+  overflow: scroll;
+  padding-top: 50px !important;
+}
+.marque {
+  border: 1px dashed #ccc;
+  display: inline-block;
+}
+div.marque {
+  border: 1px dashed #ccc;
+  display: block;
+  height: calc(100% - 2px);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.parent {
+  background-color: aliceblue;
+  overflow: hidden;
+  .basicDiv {
+    height: 50px;
+  }
+}
+.exe-padding {
+  .basicDiv {
+    height: auto;
+  }
+}
+.exe-margin {
+  .margin-variant {
+    height: auto;
+  }
+}
+ .exe-borderBox {
+  .basicDiv {
+    height: 50px;
+    &.padding {
+      padding: 10px;
+    }
+  }
+ }
+
+.exe-absolute {
+  .parent {
+    position: relative;
+    padding: 30px;
+  }
+}
+
+.exe-fixed {
+  .parent {
+    position: relative;
+    overflow: scroll;
+    height: 100%;
+  }
+}
+
+
+//************************ Example Code ************************//
+.div {
+  background-color: aquamarine;
+  height: 100px;
+}
+
+.divShort {
+  background-color: aquamarine;
+  height: 100px;
+  width: 50px;
+  margin: 5px;
+}
+
+.basicSpan {
+  background-color: darkturquoise;
+}
+
+.inlineBlock {
+  background-color: cornflowerblue;
+  height: 50px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.displayNone {
+  display: none;
+}
+
+.visibilityHidden {
+  visibility: hidden;
+}
+
+.floatRight {
+  background-color: darkcyan;
+  height: 50px;
+  float: right;
+  border: solid 1px #055A5A;
+  padding: 3px;
+}
+
+.floatLeft {
+  background-color: darkcyan;
+  height: 50px;
+  float: left;
+  border: solid 1px #055A5A;
+  padding: 3px;
+}
+
+.floatParent {
+  background-color: aliceblue;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.floatParent:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.margin {
+  margin: 40px;
+}
+
+.padding {
+  padding: 40px;
+}
+
+.padding-variant {
+  padding-top: 20px;
+  padding-right: 70px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+}
+
+.margin-variant {
+  margin-top: 20px;
+  margin-right: 70px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.box-sizing {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.inlineBlock-Relative {
+  background-color: aqua;
+  height: 50px;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  top: 30px;
+  left: -15px;
+}
+
+.absolute {
+  background-color: aqua;
+  height: 50px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+.inlineBlock-zIndex {
+  background-color: coral;
+  padding: 5px;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+  z-index: 200;
+  right: -20px;
+  top: -5px;
+}
+
+
+
+//media queries for tablet
+@media only screen and (max-width: 880px) {
+  .screen {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 10px;
+
+  }
+  aside {
+    width: 100%;
+  }
+}

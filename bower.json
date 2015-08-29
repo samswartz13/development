@@ -17,6 +17,8 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.2.0"
+    "fontawesome": "~4.2.0",
+    "packery": "~1.4.2",
+    "modernizer": "~2.8.2"
   }
 }
