@@ -1,0 +1,1 @@
+var $container=$("#container");$container.packery({itemSelector:".item",gutter:10}),$container.on("click",".item",function(e){var t=$(e.target),n=t.hasClass("full-screen");t.toggleClass("full-screen"),n?$container.packery():$container.packery("fit",e.target)});
