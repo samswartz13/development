@@ -27,7 +27,7 @@ body {
 	letter-spacing: 2px;
 	position: relative;
 	line-height: 20px;
-	top: calc(-40px);
+	top: 0;
 	text-align: center;
 }
 
@@ -49,10 +49,6 @@ body {
 	transition: background-position 100ms linear;
 	&:hover {
 		background-position: bottom center;
-		.tile-title {
-			opacity: 1;
-			transform: translateY(20px);
-		}
 	}
 }
 // &.full-screen {

@@ -1,9 +1,46 @@
- #body {
+* {
   //  background-color: black;
    font-family: 'Alegreya Sans', sans-serif;
    margin: 0;
    padding: 0;
    color: #6e6e6e;
+}
+
+a, a:visited {
+  color: #6e6e6e;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  opacity: .7;
+  transition: opacity 100ms linear;
+  i {
+    position: relative;
+  }
+  i:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: #616161 1px solid;
+    opacity: 0;
+    transition: opacity 100ms linear 20ms;
+  }
+  &:hover {
+    opacity: 1;
+    i:after {
+      animation: flash 250ms linear;
+    }
+  }
 }
 
 .container {
@@ -45,6 +82,21 @@
   }
 }
 
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
 
 @keyframes easing {
   0% {
