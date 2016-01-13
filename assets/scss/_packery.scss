@@ -1,10 +1,11 @@
-$packery-width: calc(100% - 500px);
+$packery-width: calc(100% - 350px);
 body {
 	height: 100%;
 	height: 100vh;
 	width: 100%;
 	width: 100vw;
 	overflow: hidden;
+	background-color: #f1f1f1;
 }
 .wrapper {
 	background-color: #f1f1f1;
@@ -17,6 +18,7 @@ body {
 	box-sizing: border-box;
 	padding: 10px; //matches packery gutter
 }
+
 .tile-title {
 	transition: all .3s ease-in-out;
 	opacity: 0;
@@ -25,156 +27,56 @@ body {
 	letter-spacing: 2px;
 	position: relative;
 	line-height: 20px;
-	top: calc(-100px - 10px);
+	top: calc(-40px);
 	text-align: center;
 }
-.iframe-wrap {
-	position: relative;
-	height: 200px;
-	overflow: hidden;
-	transition: box-shadow .15s linear;
-	iframe {
-		position: relative;
-	    top: -50%;
-	    left: -30%; 
-	}
-	&:hover {
-		transform: translateZ(0);
-		&:after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0; right: 0; bottom: 0; left: 0;
-			background-color: rgba(#000,.75);
-			
-		}
-
-	}
-	&.walker {
-		
-
-	}
-
-	&:hover ~ .tile-title {
-		opacity: 1;
-	}	
-
-	iframe {
-		height: 320%;
-		width: 320%;
-		transform: scale(0.5) translateX(-50%) translateY(-50%);
-		transform-origin: center;
-	}
-}
-
 
 #container {
+	height: 100% !important;
+}
 
-	.item {
-		width: 30%;
-		height: 200px;
-		// .walker {
-		// 	background: no-repeat url('../images/walker.gif') center/cover;
-		// 	height: 100%;
-		// 	width: 100%;
-		// }
-		// background-color: lime;
-		// transition: background .15s ease-in-out;
-		// background: no-repeat url('../images/iPad-cropped.png') center/contain;
-		// perspective: 1000px;
-		// perspective-origin: center right;	
-		// perspective: 1220px;
-  //   	perspective-origin: top right;		
-		// display: -ms-flexbox;
-			// display: -webkit-flex;
-			// display: flex;
-
-			// -ms-flex-align: center;
-			// -webkit-align-items: center;
-			// -webkit-box-align: center;
-
-			// align-items: center;
-
-		&:after:not(.iframe) {
-			content: '';
-			// width: 44%;
-			margin: 0 auto;
-			// position: relative;
-			// top: 50%;
-			// padding-bottom: 71%;
-			// max-height: 100%;
-			// margin: 4.5% 27.5%;
-			// transform: rotateZ(57deg) rotateX(49deg) rotateY(-40deg) skewX(0deg) skewY(0deg) translateY(19%) translateX(3%);
-
-			display: block;
-			// background: no-repeat lime url('http://www.hercampus.com/sites/default/files/2014/10/05/Sweet-puppy-sitting.jpg') center top/contain;
-			// transform-style: preserve-3d;
-			// transform-origin: center right;
-  			// transform: rotateZ(52deg) rotateX(50deg) rotateY(-37deg) skewX(-9deg) skewY(2deg) translateY(-50%);
-  			// transform: rotateZ(52deg) rotateX(49deg) rotateY(-39deg) skewX(-6.5deg) skewY(3deg);
-    // content: '';
-    // width: 49%;
-    // margin: 0 auto;
-    // padding-bottom: 71%;
-
-    // display: -ms-flexbox;
-    // display: -webkit-flex;
-    // display: flex;
-    // -ms-flex-align: center;
-    // -webkit-align-items: center;
-    // -webkit-box-align: center;
-    // align-items: center;
-
-    // background: no-repeat lime url("http://www.hercampus.com/sites/default/files/2014/10/05/Sweet-puppy-sitting.jpg") center top/contain;
-    // transform-style: preserve-3d;
-    // transform-origin: center right;
-    // transform: rotateZ(63deg) rotateX(52deg) rotateY(-50deg) skewX(0deg) skewY(0deg) translateX(4%) translateY(15%);
-		}
-		.content {
-			box-sizing: border-box;
-			padding: 30px;
-			position: absolute;
-			transform: translateY(100%);
-			margin: 0 auto;
-			opacity: 0;
-			width: 85%;
-			height: 600px;
-			height: calc(100vh - 290px);
-			bottom: 10px;
-			background-color: white;
-			transition: transform .3s linear, opacity .1s linear;
-			left: 0; right: 0;
-		}
-
-		&.BA {
-			background-color: #1a1a1a;
-		}
-		&.full-screen {
-			width: 100%;
-			height: 100%;
-			height: 100vh;
-			z-index: 1000;
-			pointer-events: none;
-			background-position: center top;
-			background-size: auto 290px;
-			&:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 100px;
-				height: 100px;
-				background-color: red;
-				pointer-events: auto;
-			}
-			.content {
-				transition: transform .3s cubic-bezier(0.1,0.28,.7,.89) .2s, opacity .25s linear .2s;
-				display: block;
-				transform: translateY(0px);
-				opacity: 1;
-			}
+.item {
+	width: calc(50% - 7.5px);
+	// min-width: 550px;
+	// height: 200px;
+	height: calc(50% - 7.5px);
+	overflow: hidden;
+	// height: 338px;
+	background-image: linear-gradient(to bottom, rgba(#ff7c00, 0) 0%, rgba(#ff7c00, 0) 50%, rgba(#ffa73d, .7) 50%, rgba(#ffc27c, .7) 100%);
+	background-color: #ff7c00;
+	background-size: 100% 200%;
+	background-position: top center;
+	transition: background-position 100ms linear;
+	&:hover {
+		background-position: bottom center;
+		.tile-title {
+			opacity: 1;
+			transform: translateY(20px);
 		}
 	}
 }
+// &.full-screen {
+// 	width: 100%;
+// 	height: 100%;
+// 	height: 100vh;
+// 	z-index: 1000;
+// 	pointer-events: none;
+// 	background-position: center top;
+// 	background-size: auto 290px;
+// 	&:before {
+// 		content: '';
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		width: 100px;
+// 		height: 100px;
+// 		background-color: red;
+// 		pointer-events: auto;
+// 	}
+// 	.content {
+// 		transition: transform .3s cubic-bezier(0.1,0.28,.7,.89) .2s, opacity .25s linear .2s;
+// 		display: block;
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }

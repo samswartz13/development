@@ -1,49 +1,9 @@
-<!doctype html><html lang=en-us dir=ltr class=no-js><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title>Testing</title><link rel=stylesheet href=assets/css/main.css><link rel=stylesheet href=assets/css/custom.css><script src=assets/js/modernizr.min.js></script><script src=https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js></script></head><body><script>
-
-  $(document).ready(function(){
-
-      var height = $( window ).height();
-  console.log(height);
-  $("#body").css("height", height);
-
-    var back = 180;
-    var middle = 300;
-    var front = 500;
-    var YY,
-        offset,
-        sizeBack,
-        sizeMiddle,
-        sizeFront;
-
-    // For mouse users
-    $('html').mousemove(function(e){
-
-      offset = $('html').offset();
-      YY = e.clientY - offset.top;
-
-      sizeBack   = Math.abs(back-YY)/40;
-      sizeMiddle = Math.abs(middle-YY)/40;
-      sizeFront  = Math.abs(front-YY)/40;
-
-      // apply blur
-      $('.back').css({
-        '-webkit-filter': 'blur('+ (sizeBack) +'px)',
-        '-webkit-transform': 'translate3d(-100px,'+ -YY/20 +'px,'+ -YY/20 +'px)',
-        '-moz-transform': 'translate3d(-100px,'+ -YY/20 +'px,'+ -YY/20 +'px)',
-        'transform': 'translate3d(-100px,'+ -YY/20 +'px,'+ -YY/20 +'px)'
-      });
-      $('.middle').css({
-        '-webkit-filter': 'blur('+ (sizeMiddle) +'px)',
-        '-webkit-transform': 'translate3d(-200px,'+ -YY/15 +'px,'+ -YY/15 +'px)',
-        '-moz-transform': 'translate3d(-200px,'+ -YY/15 +'px,'+ -YY/15 +'px)',
-        'transform': 'translate3d(-200px,'+ -YY/15 +'px,'+ -YY/15 +'px)'
-      });
-      $('.front').css({
-        '-webkit-filter': 'blur('+ (sizeFront) +'px)',
-        '-webkit-transform': 'translate3d(-300px,'+ -YY/10 +'px,'+ -YY/10 +'px)',
-        '-moz-transform': 'translate3d(-300px,'+ -YY/10 +'px,'+ -YY/10 +'px)',
-        'transform': 'translate3d(-300px,'+ -YY/10 +'px,'+ -YY/10 +'px)'
-      });
-    });
-  });
-</script><div id=body><div class="back layer"></div><div class="middle layer"></div><div class="front layer"></div><p>Testing 2</p></div></body></html>
+<!doctype html><html lang=en-us dir=ltr class=no-js><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title>Samantha Swartz</title><link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:300" rel=stylesheet type=text/css><link rel=stylesheet href=assets/css/custom.css></head><body id=body><div class="container aside"><div class=centered><div class=title>Advanced<br>CSS</div><div class=horizontal-divider></div><!--<span id="watercolor"></span>--><div><q>Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.</q></div></div></div><div class=wrapper><div id=container><!--<div class="item BA">--><!--For expanded view--><!--<div class="content">
+ <h1>Bar Academy</h1>
+ <p>Some text about some stuff and whatever</p>
+ </div>
+ </div>--><div class="item iframe"><div class="iframe-wrap solar"><iframe src="http://codepen.io/juliangarnier/full/idhuG/" style="top: -10%;" data-title="Solar System" allowtransparency=true frameborder=0 scrolling=no data-src="http://codepen.io/juliangarnier/full/idhuG/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe></div><div class=tile-title>Solar System</div></div><div class="item iframe"><div class="iframe-wrap mario"><iframe src="http://cordobo.com/wp-content/uploads/pure-css-animated-3d-super-mario/" data-title="3D CSS Mario" allowtransparency=true frameborder=0 scrolling=no data-src="http://cordobo.com/wp-content/uploads/pure-css-animated-3d-super-mario/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe></div><div class=tile-title>3D CSS Mario</div></div><div class=item><div class="iframe-wrap walker"><iframe src="http://www.anthonycalzadilla.com/css3-ATAT/" data-title=ATAT allowtransparency=true frameborder=0 scrolling=no data-src="http://www.anthonycalzadilla.com/css3-ATAT/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe><!--<div id="walker"></div>--></div><div class=tile-title>AT-AT Walker</div></div><div class="item iframe"><div class="iframe-wrap graph"><iframe src="http://codepen.io/ninjascribble/full/rHwkK/" style="top: 0;" data-title="CSS Chronograph" allowtransparency=true frameborder=0 scrolling=no data-src="http://codepen.io/ninjascribble/full/rHwkK/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe></div><div class=tile-title>CSS Chronograph</div></div><div class="item iframe"><div class="iframe-wrap dulla"><iframe src="http://playdulla.com/" data-title="Play Dulla" allowtransparency=true frameborder=0 scrolling=no data-src="http://playdulla.com/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe></div><div class=tile-title>Dulla</div></div><div class="item iframe"><div class="iframe-wrap creatures"><iframe src="http://bennettfeely.com/csscreatures/" data-title="CSS Creatures" allowtransparency=true frameborder=0 scrolling=no data-src="http://bennettfeely.com/csscreatures/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe></div><div class=tile-title>CSS Creatures</div></div><div class="item iframe"><div class="iframe-wrap creatures"><iframe src="http://codepen.io/noahblon/full/lxukH/" data-title="Animated SVG Icons" allowtransparency=true frameborder=0 scrolling=no data-src="http://codepen.io/noahblon/full/lxukH/" sandbox="allow-scripts allow-pointer-lock allow-same-origin"></iframe></div><div class=tile-title>Animated SVG Icons</div></div></div></div><script src=bower_components/jquery/dist/jquery.min.js></script><script src=bower_components/modernizer/modernizer.js></script><script src=bower_components/packery/dist/packery.pkgd.min.js></script><script src=assets/js/custom.js></script><script>
+$( document ).ready(function() {
+   // $('#walker').load('http://www.anthonycalzadilla.com/css3-ATAT/ #the-screen');
+});
+</script></body></html>

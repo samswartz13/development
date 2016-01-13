@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="assets/css/custom.css" />
 
 </head>
-<body id="body">
+<body class="css-class" id="body">
 <nav class="fixed">
 	<ul>
 		<li class="brand"><a href="#body">Advanced CSS</a></li>
@@ -24,15 +24,15 @@
 
 <p>
 	HTML is made of <em>elements</em><br>
-	<em>Elements</em> have different default css <em>properties</em> that changes how the HTML element is rendered
+	<em>Elements</em> have different default css <em>properties</em> that change how the HTML element is rendered.
 
 </p>
 
 <section id="display">
 	<h3>HTML Display Attributes</h3>
-	<h4>Block Elements</h4> 
-	<p>These elements stretch from one edge of the page to the other. They respect margin, height &amp; padding</p>
-	
+	<h4>Block Elements</h4>
+	<p>These elements stretch from one edge of the page to the other. They respect margin, height &amp; padding.</p>
+
 	<div class="example">
 		<section class="screen">
 			<div class="div"></div>
@@ -50,10 +50,10 @@
 		</aside>
 	</div>
 
-	<p><span class="caps">Real world use:</span> most layouts are built with divs - these are the blocks that usually hold all your content</p>
+	<p><span class="caps">Real world use:</span> most layouts are built with divs - these are the blocks that usually hold all your content.</p>
 
-<p>Setting width on block level elements will <b>NOT</b> make them flow next to one another. See inline-block, inline, or float for that behavior</p>
-	
+<p>Setting width on block level elements will <b>NOT</b> make them flow next to one another. See inline-block, inline, or float for that behavior.</p>
+
 	<div class="example">
 		<section class="screen">
 			<div class="divShort"></div>
@@ -96,7 +96,7 @@
 
 <pre class="prettyprint">
 .basicSpan {
-  background-color: darkturquise;
+  background-color: darkturquoise;
   height: 100px;	/*This does nothing */
   /* display is automatically set to inline */
 }
@@ -129,7 +129,7 @@
 </pre>
 		</aside>
 	</div>
-	<p><span class="caps">Real world use:</span> This is a pretty powerful layout tool - anytime you want content side by side, inside block is an option</p>
+	<p><span class="caps">Real world use:</span> This is a pretty powerful layout tool - anytime you want content side by side, inline block is an option.</p>
 </section>
 
 
@@ -138,7 +138,7 @@
 <section id="showHide">
 	<h3>Show/Hide with Display Properties</h3>
 	<h4>Display None Property</h4>
-	<p>Display None is a CSS Property that can be set on any HTML element. When display none is applied, it's as if the content was never there. Any parent or sibling elements end up positioned as if the there was nothing else on the page</p>
+	<p>Display None is a CSS Property that can be set on any HTML element. When display none is applied, it's as if the content was never there. Any parent or sibling elements end up positioned as if there was nothing else on the page.</p>
 
 		<div class="example">
 		<section class="screen">
@@ -197,8 +197,8 @@
 <section id="floats">
 	<h3>Floats</h3>
 	<h4>Float Basics</h4>
-	<p>Floats take an HTML element out of the standard flow. Content will flow around it floated elements. Floats behave like inline block elements. For more info on floats, check out <a href="https://css-tricks.com/all-about-floats/" target="_blank">this good article</a></p>
-	
+	<p>Floats take an HTML element out of the standard flow. Content will flow around it floated elements. Floats behave like inline block elements. For more info on floats, check out <a href="https://css-tricks.com/all-about-floats/" target="_blank">this good article</a>.</p>
+
 
 		<div class="example">
 		<section class="screen">
@@ -223,7 +223,7 @@
 		</aside>
 	</div>
 
-<p>Once the float property is added, it doesn't matter where the HTML element is in terms of your code. Even if your element is at the bottom of your HTML doc, if you assign float to it it will move to the top of its parent. The following example shows a parent div containing it&#39;s floated children.</p>
+<p>Once the float property is added, it doesn't matter where the HTML element is in terms of your code. Even if your element is at the bottom of your HTML doc, if you assign float to an element it will move to the top of its parent. The following example shows a parent div containing it&#39;s floated children.</p>
 
 	<div class="example">
 		<section class="screen">
@@ -250,7 +250,7 @@
 
 	<div class="example">
 		<section class="screen">
-			
+
 			<div class="floatLeft">Float Left</div>
 			<div class="floatLeft">FloatLeft</div>
 
@@ -265,8 +265,8 @@
 <section>
 	<h4>Clearing Floats</h4>
 
-	<p>Let&#39;s say we wanted to make a floated nav bar. We use floats because we don&#39;t want any space between our divs, but we also don't want our content to wrap around our floats anymore. This is when you would use the css <b>clear</b> property.</p> 
-	<p>We'll cover the shown here in a future class, but for now I'll show you a simple method that&#39;s good for clearing floats. The :after is the key</p>
+	<p>Let&#39;s say we wanted to make a floated nav bar. We use floats because we don&#39;t want any space between our divs, but we also don't want our content to wrap around our floats anymore. This is when you would use the css <b>clear</b> property.</p>
+	<p>We'll cover the :after css sudo shown here in a future class, but for now I'll show you a simple method that&#39;s good for clearing floats. The :after is the key.</p>
 
 		<div class="example">
 		<section class="screen">
@@ -303,7 +303,7 @@
 	<h3>Spacing Elements - Margin & Padding</h3>
 	<h4>Margin</h4>
 
-	<p>Use margin to create space <b>outside</b> of your element</p> 
+	<p>Use margin to create space <b>outside</b> of your element.</p>
 
 
 		<div class="example">
@@ -324,12 +324,12 @@
 
 </pre>
 		</aside>
-	</div><p>The default margin property adds an equal amount on all sides of the element you assign it to. Here's how you could make different sides different values</p> 
+	</div><p>The default margin property adds an equal amount on all sides of the element you assign it to. Here's how you could make different sides different values.</p>
 
 
 		<div class="example exe-margin">
-		<section class="screen">	
-				<h4>This div has all different kinds of margin</h4>			
+		<section class="screen">
+				<h4>This div has all different kinds of margin</h4>
 				<div class="parent">
 					<div class="div margin-variant">
 
@@ -369,11 +369,11 @@ written in shorthand*/
 <section>
 	<h4>Padding</h4>
 
-	<p>Use padding to create space <b>inside</b> of your element.</p> 
+	<p>Use padding to create space <b>inside</b> of your element.</p>
 
 
 		<div class="example exe-padding">
-		<section class="screen">				
+		<section class="screen">
 				<div class="div padding">This div has padding</div>
 				<br>
 				<div class="div">This div does not have padding</div>
@@ -392,14 +392,14 @@ written in shorthand*/
 	</div>
 
 
-<p>The default padding property adds an equal amount on all sides of the element you assign it to. Here's how you could make different sides different values</p> 
+<p>The default padding property adds an equal amount on all sides of the element you assign it to. Here's how you could make different sides different values.</p>
 
 
 		<div class="example exe-padding">
-		<section class="screen">	
-				<h4>This div has all different kinds of padding</h4>			
+		<section class="screen">
+				<h4>This div has all different kinds of padding</h4>
 				<div class="div padding-variant">
-					
+
 					<div class="text-justify">Te nullam argumentum quo, mel te dicta aliquip antiopam. Ex mei labore omittantur. Vis senserit assueverit id, error ancillae neglegentur per cu. Per ne partem aliquid. Te est harum populo dissentias. Tritani inciderint no sed.</div>
 				</div>
 
@@ -434,12 +434,12 @@ written in shorthand*/
 <section>
 	<h4>Box Sizing</h4>
 
-	<p>In this padding example, the first div is much taller than the second. Even though both have the same height, if you inspect the first element in dev tools, it actually is 130px in height</p> 
+	<p>In this padding example, the first div is much taller than the second. Even though both have the same height, if you inspect the first element in dev tools, it actually is 130px in height.</p>
 
 
 		<div class="example exe-borderBox">
-		<section class="screen">		
-			<h4>This div is rendered as 70px</h4>		
+		<section class="screen">
+			<h4>This div is rendered as 70px</h4>
 				<div class="div padding">
 					<div class="marque"></div>
 				</div>
@@ -465,11 +465,11 @@ written in shorthand*/
 		</aside>
 	</div>
 
-	<p>Padding extends the height and width of our elements unless told otherwise. Sometimes, we don't want padding to adjust the size of our element - that's when you use the box sizing property</p> 
+	<p>Padding extends the height and width of our elements unless told otherwise. Sometimes, we don't want padding to adjust the size of our element - that's when you use the box sizing property.</p>
 
 	<div class="example exe-borderBox2">
-		<section class="screen">		
-			<h4>This div is rendered as 50px</h4>		
+		<section class="screen">
+			<h4>This div is rendered as 50px</h4>
 				<div class="div box-sizing">
 					<div class="marque"></div>
 				</div>
@@ -528,7 +528,7 @@ written in shorthand*/
 	</div>
 
 </section>
-	 
+
 
 <section>
 
@@ -584,7 +584,7 @@ written in shorthand*/
 .parent {
   background-color: alice-blue; /* lt blue */
   position: relative;
-  /* position relative contains 
+  /* position relative contains
   position absolute child */
 }
 
@@ -615,7 +615,7 @@ written in shorthand*/
 	<p>Setting <b>top</b>, <b>bottom</b>, <b>left</b> or <b>right</b> on an element along with position fixed will allow you to move the element relative to the <b>BROWSER</b> and keeps it pinned to it's given position. This means that scrolling will not move the element offscreen. Sibling and parent elements will flow as if the position fixed element were not there.</p> The navigation bar on this site is an example of position fixed ;)
 
 		<div class="example">
-		
+
 
 <pre class="prettyprint">
 .fixed {
@@ -626,7 +626,7 @@ written in shorthand*/
   height: 50px;
 }
 </pre>
-		
+
 	</div>
 
 </section>
