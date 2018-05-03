@@ -6,7 +6,7 @@ var del          = require('del');
 var bower        = require('gulp-bower');
 
 // sass
-var sass         = require('gulp-sass');
+// var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -24,25 +24,25 @@ var pngquant     = require('imagemin-pngquant');
 
 
 var config = {
-     sassPath: 'assets/scss',
-     bowerDir: 'bower_components' 
+    sassPath: 'assets/scss',
+    bowerDir: 'bower_components'
 }
 
 // --------------------------
 // BOWER INSTALL
 // --------------------------
-gulp.task('bower', function() { 
+gulp.task('bower', function() {
 	return bower()
-         .pipe(gulp.dest(config.bowerDir)) 
+        .pipe(gulp.dest(config.bowerDir))
 });
 
 
 // --------------------------
 // SASS
 // --------------------------
-gulp.task('icons', function() { 
-	gulp.src('bower_components/fontawesome/fonts/**.*') 
-	.pipe(gulp.dest('assets/fonts')); 
+gulp.task('icons', function() {
+	gulp.src('bower_components/fontawesome/fonts/**.*')
+	.pipe(gulp.dest('assets/fonts'));
 });
 
 
@@ -108,7 +108,7 @@ gulp.task('browser-sync', function() {
 		server: "./"
 	});
 
-	gulp.watch("assets/scss/**/*.scss", ['sass']);
+	// gulp.watch("assets/scss/**/*.scss", ['sass']);
 	gulp.watch("*.html").on('change', browserSync.reload);
 });
 
@@ -125,7 +125,7 @@ gulp.task('reload-html', function(){
 // --------------------------
 // DEV/WATCH TASK
 // --------------------------
-gulp.task('watch', [ 'sass', 'browser-sync'], function(){
+gulp.task('watch', [  'browser-sync'], function(){
 
 });
 

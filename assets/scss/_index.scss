@@ -10,15 +10,30 @@ a, a:visited {
   color: #6e6e6e;
 }
 
+.sr-only {
+  display: none;
+}
+
+.item.full-screen {
+  top: 0 !important;
+  left: 0 !important;
+}
+
 .btn {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
   text-align: center;
   display: inline-block;
   opacity: .7;
   transition: opacity 100ms linear;
+  a {
+    display: block;
+    &:focus {
+      background-color: none;
+    }
+  }
   i {
     position: relative;
   }
@@ -54,13 +69,14 @@ a, a:visited {
     height: 600px;  //fallback
     height: 100vh;
     vertical-align: middle;
-    .title {
+    .title h1 {
       opacity: 0;
       -webkit-animation: easing .7s cubic-bezier(0.1,0.28,0.7,.87) forwards;
       animation: easing .7s cubic-bezier(0.1,0.28,0.59,.87) forwards;
       text-transform: uppercase;
       letter-spacing: 10px;
       font-size: 45px;
+      font-weight: 200;
       color: #6e6e6e;
       font-variant-ligatures: common-ligatures;
       text-rendering: optimizeLegibility;
@@ -81,6 +97,23 @@ a, a:visited {
     float: left;
   }
 }
+
+
+//mobile adjustments
+.sub-title {
+  font-size: 18px;
+  transform-origin: top left;
+  transition: transform 200ms linear;
+  .btn:first-child {
+    //for aligning edge of button to edge of rest of  text
+    margin-left: -11px;
+  }
+  .job-title h2 {
+    font-weight: 200;
+    font-size: 30px;
+  }
+}
+
 
 @keyframes flash {
   0% {
