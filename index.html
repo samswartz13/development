@@ -9,131 +9,177 @@
   <meta name="author" content="Samantha Swartz">
   <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body id="body">
+<body class="flex--container" id="body">
 
-<div class="container aside">
-  <div class="centered">
-    <div class="title">
-      <h1>Sam Swartz</h1>
-    </div>
+  <aside class="flex--column container">
+    <div class="flex--item personal-info">
+      <h1 class="personal-info--name">Sam Swartz</h1>
 
-    <div class="horizontal-divider"></div>
-    <div class="sub-title">
-      <span class="btn">
-        <a target="_blank" href="https://www.linkedin.com/in/samantha-swartz-b594173a">
-          <i class="fa fa-linkedin"></i>
-        </a>
-      </span>
-      <span class="btn">
-        <a target="_blank" href="http://codepen.io/samswartz/">
-          <i class="fa fa-codepen"></i>
-        </a>
-      </span>
-      <div class="job-title">
-        <h2>Senior UX Developer</h2>
+      <h2 class="personal-info--title">Senior UX Developer</h2>
+
+      <div class="horizontal-divider"></div>
+
+      <div class="personal-info--social">
+        <span class="btn">
+          <a target="_blank" href="https://www.linkedin.com/in/samantha-swartz-b594173a">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </span>
+        <span class="btn">
+          <a target="_blank" href="http://codepen.io/samswartz/">
+            <i class="fa fa-codepen"></i>
+          </a>
+        </span>
+        
+        <p class="sr-only">
+          Frontend Web Developer and User Experience Architect. Specialty in developing and designing responsive user interfaces and dashboards for web applications using Angular 1 and Angular 2. Highly experienced in contributing and building out new modules for platform/foundation code leveraged across multiple web products. Additional specialties include designing for Web Accessibility Standards (AA), developing charts and visualizations using D3, and designing/building CSS and JavaScript animations.
+        </p>
       </div>
-      <p class="sr-only">
-        Frontend Web Developer and User Experience Architect. Specialty in developing and designing responsive user interfaces and dashboards for web applications using Angular 1 and Angular 2. Highly experienced in contributing and building out new modules for platform/foundation code leveraged across multiple web products. Additional specialties include designing for Web Accessibility Standards (AA), developing charts and visualizations using D3, and designing/building CSS and JavaScript animations.
-      </p>
+    </div>
+  </aside>
+  <div class="flex--grid">
+    <div class="grid--wrapper">
+      <div class="grid--container">
+      <a class="clickable grid--item" id="designSystem">
+        <div class="item design-system">
+          <h3 class="sr-only">Pitney Bowes Design System</h3>
+            <div class="image-wrapper">
+              <div class="tablet"></div>
+              <div class="screen-bg"></div>
+              <div class="screen-drop-shadow">
+                <div class="shadow-object"></div>
+              </div>
+              <div class="hover-bg">
+                <div class="background-image"></div>
+              </div>
+              
+              <p class="sr-only">
+                Advanced CSS was a mini course taught to a range of grades from Freshman to Seniors. It challenged students to use modern tools such as SASS alongside CSS best practices. In addition, students were shown how to use CSS keyframes and transitions. Students were expected to submit a final animation project that was a culmination of their work and what they learned.
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- <a class="clickable grid--item" id="advancedCss">
+          <div class="item advanced-css">
+            <h3 class="sr-only">Advanced CSS - College Course at TCNJ (The College of New Jersey)</h3>
+              <div class="image-wrapper">
+                <div class="tablet"></div>
+                <div class="screen-bg"></div>
+                <div class="screen-drop-shadow">
+                  <div class="shadow-object"></div>
+                </div>
+                <div class="hover-bg">
+                  <div class="background-image"></div>
+                </div>
+                
+                <p class="sr-only">
+                  Advanced CSS was a mini course taught to a range of grades from Freshman to Seniors. It challenged students to use modern tools such as SASS alongside CSS best practices. In addition, students were shown how to use CSS keyframes and transitions. Students were expected to submit a final animation project that was a culmination of their work and what they learned.
+                </p>
+              </div>
+          </div>
+        </a> -->
+        
+        <a class="clickable grid--item" id="barAcademy">
+
+        <!-- <a href="http://www.baracademy101.com/" target="_blank"> -->
+          <div class="item baracademy">
+            <h3 class="sr-only">Bar Academy 101 - Freelance Website</h3>
+            <div class="image-wrapper">
+              <div class="tablet"></div>
+              <div class="screen-bg"></div>
+              <div class="screen-drop-shadow">
+                <div class="shadow-object"></div>
+              </div>
+              <div class="hover-bg">
+                <div class="background-image"></div>
+              </div>
+              <p class="sr-only">
+                  Rob, the owner of BarAcaemy 101 approached me to design and build a custom website for his beer and wine tasting business. I both designed and developed his site using HTML, CSS, and Javascript. Additional tools used were Gulp and Browsersync.
+                </p>
+            </div>
+          </div>
+        </a>
+        <a class="clickable grid--item" id="blueLaurel">
+        <!-- <a href="http://ineek.eu/" target="_blank"> -->
+          <div class="item bluelaurel">
+            <h3 class="sr-only">Blue Laurel Health</h3>
+            <div class="image-wrapper">
+              <div class="tablet"></div>
+              <div class="screen-bg"></div>
+              <div class="screen-drop-shadow">
+                <div class="shadow-object"></div>
+              </div>
+              <div class="hover-bg">
+                <div class="background-image"></div>
+              </div>
+              <p class="sr-only">
+                Designed flagship site for iNeek; expanded on their branding in two posters, and one trifold brochure. Created original web copy comprehensively for site redesign, along with extensive re-organization of existing website structure. Created web layouts for two separate projects and consulted with clients daily.
+              </p>
+            </div>
+          </div>
+        </a>
+        <a class="clickable grid--item" id="romyoga">
+        <!-- <a href="http://romyoga.com/" target="_blank"> -->
+          <div class="item romyoga">
+            <h3 class="sr-only">Romyoga</h3>
+            <div class="image-wrapper">
+                <div class="tablet"></div>
+              <div class="screen-bg"></div>
+              <div class="screen-drop-shadow">
+                <div class="shadow-object"></div>
+              </div>
+              <div class="hover-bg">
+                <div class="background-image"></div>
+              </div>
+              <p class="sr-only">
+                Romy, owner of Romyoga, asked me to redesign her current site for her small in-home yoga studio. I designed and built both the front and back end of her site. I created my own responsive CMS and front-end which were tailor-fit to meet her needs using HTML, CSS, Javascript and PHP.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</div>
-<div class="wrapper">
-<div id="container">
-  <a class="clickable" id="advancedCss">
-  <!-- <a href="http://sincerelysrs.com/advancedCSS/basics.html" target="_blank"> -->
-    <div class="item advanced-css">
-      <h3 class="sr-only">Advanced CSS - College Course at TCNJ (The College of New Jersey)</h3>
-        <div class="image-wrapper">
-          <div class="test-bg"></div>
-          <div class="test-shadow">
-            <div class="shadow-object"></div>
-          </div>
-          <div class="hover-bg">
-            <div class="background-image"></div>
-          </div>
-          
-          <p class="sr-only">
-            Advanced CSS was a mini course taught to a range of grades from Freshman to Seniors. It challenged students to use modern tools such as SASS alongside CSS best practices. In addition, students were shown how to use CSS keyframes and transitions. Students were expected to submit a final animation project that was a culmination of their work and what they learned.
-          </p>
-        </div>
-    </div>
-  </a>
-  <a class="clickable" id="barAcademy">
 
-  <!-- <a href="http://www.baracademy101.com/" target="_blank"> -->
-    <div class="item baracademy">
-      <h3 class="sr-only">Bar Academy 101 - Freelance Website</h3>
-      <div class="image-wrapper">
-        <div class="test-bg"></div>
-        <div class="test-shadow">
-          <div class="shadow-object"></div>
+  <div class="modal" id="modal">
+    <div class="modal--bg" id="modalBg"></div>
+    <div class="modal--body">
+      <div class="modal--body--img">
+        <div class="modal--body--img--screen" id="modalImg"></div>
+      </div>
+      <div class="modal--body--content">
+        <div class="modal--body--content--header">
+          <h2 class="modal--body--header--title" id="modalTitle">Title of project</h2>
+          <h3 class="modal--body--header--rolw" id="modalRole">What my role was</h3>
         </div>
-        <div class="hover-bg">
-          <div class="background-image"></div>
+        <div class="modal--body--content--description">
+          <p id="modalDescription"></p>
+          <p id="modalTechnology"></p>
         </div>
-         <p class="sr-only">
-            Rob, the owner of BarAcaemy 101 approached me to design and build a custom website for his beer and wine tasting business. I both designed and developed his site using HTML, CSS, and Javascript. Additional tools used were Gulp and Browsersync.
-          </p>
+      </div>
+      
+      <div class="modal--close" id="modalClose">
+        <i class="fa fa-close"></i>
       </div>
     </div>
-  </a>
-  <a class="clickable" id="ineek">
-  <!-- <a href="http://ineek.eu/" target="_blank"> -->
-    <div class="item ineek">
-      <h3 class="sr-only">iNeek</h3>
-      <div class="image-wrapper">
-        <div class="test-bg"></div>
-        <div class="test-shadow">
-          <div class="shadow-object"></div>
-        </div>
-        <div class="hover-bg">
-          <div class="background-image"></div>
-        </div>
-        <p class="sr-only">
-          Designed flagship site for iNeek; expanded on their branding in two posters, and one trifold brochure. Created original web copy comprehensively for site redesign, along with extensive re-organization of existing website structure. Created web layouts for two separate projects and consulted with clients daily.
-        </p>
-      </div>
-    </div>
-  </a>
-  <a class="clickable" id="romyoga">
-  <!-- <a href="http://romyoga.com/" target="_blank"> -->
-    <div class="item romyoga">
-      <h3 class="sr-only">Romyoga</h3>
-      <div class="image-wrapper">
-        <div class="test-bg"></div>
-        <div class="test-shadow">
-          <div class="shadow-object"></div>
-        </div>
-        <div class="hover-bg">
-          <div class="background-image"></div>
-        </div>
-        <p class="sr-only">
-          Romy, owner of Romyoga, asked me to redesign her current site for her small in-home yoga studio. I designed and built both the front and back end of her site. I created my own responsive CMS and front-end which were tailor-fit to meet her needs using HTML, CSS, Javascript and PHP.
-        </p>
-      </div>
-    </div>
-  </a>
-</div>
-</div>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/modernizer/modernizr.js"></script>
-<script src="bower_components/packery/dist/packery.pkgd.min.js"></script>
-<script src="assets/js/custom.js"></script>
+    
+  </div>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script src="assets/js/script.js"></script>
 
-  ga('create', 'UA-27065644-1', 'auto');
-  ga('send', 'pageview');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</script>
+    ga('create', 'UA-27065644-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "0.0.0",
   "authors": [
     "samswartz13 <samantha.r.swartz@gmail.com>"
@@ -17,8 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.2.0",
-    "packery": "~1.4.2",
-    "modernizer": "~2.8.2"
+    "fontawesome": "~4.2.0"
   }
 }

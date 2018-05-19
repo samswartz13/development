@@ -1,0 +1,173 @@
+$width-set: 500px;
+$height-set: 253px;
+
+$width: 100%;
+$height: 100%;
+
+
+.scale-down {
+  transform: scale(0);
+}
+.screen-bg {
+  transform: matrix3d(0.3011, 0.125715, 0, -0.000155996, -0.905245, 0.381866, 0, -0.00035894, 0, 0, 1, 0, 262, 20, 0, 1);
+  transform-origin: 0px 0px 0px;
+  width: $width-set;
+  height: $height-set;
+  padding-bottom: 48%;
+  position: absolute;
+  background-color: #4e4e4e;
+}
+
+.item {
+  transition: transform 100ms linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  &:after {
+    content: '';
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    line-height: 20px;
+    bottom: 15%;
+    left: 0;
+    text-align: center;
+    right: 0;
+    text-shadow: 0 0 6px rgba(#000, .4);
+  }
+  &:hover {
+    .screen-drop-shadow .shadow-object {
+      transform: scale(.85);
+      opacity: .8;
+      filter: blur(40px);
+    }
+    .hover-bg {
+      transform: translateY(-40px);
+    }
+    &:after {
+      opacity: 1;
+			transform: translateY(20px);
+    }
+  }
+
+}
+
+
+.image-wrapper {
+  position: absolute;
+  width: $width-set;
+  height: $height-set;
+
+  .tablet {
+    width: $width-set;
+    height: $height-set;
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url("../images/iPad-cropped.png") no-repeat center left/cover;
+  }
+
+  .screen-drop-shadow {
+    transform: matrix3d(0.3011, 0.125715, 0, -0.000155996, -0.905245, 0.381866, 0, -0.00035894, 0, 0, 1, 0, 262, 20, 0, 1);
+    transform-origin: 0px 0px 0px;
+    width: $width-set;
+    height: $height-set;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    .shadow-object {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .9;
+      transform: scale(1);
+      // transition: all 300ms linear;
+      transition: filter 300ms linear, opacity 300ms linear, ;
+      transition: -webkit-filter 300ms linear, opacity 300ms linear, transform 300ms linear;
+      filter: blur(0);
+    }
+  }
+}
+.hover-bg {
+  width: $width-set;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 300ms ease-in-out;
+  transform: translateY(0);
+}
+
+.background-image {
+  background: url("../images/advancedcss-sm.jpg") no-repeat top left/100% 100%;
+  transform: matrix3d(0.3011, 0.125715, 0, -0.000155996, -0.905245, 0.381866, 0, -0.00035894, 0, 0, 1, 0, 262, 20, 0, 1);
+  transform-origin: 0px 0px 0px;
+  width: $width-set;
+  height: $height-set;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // box-shadow: 5px 3px 0 0 #f1f1f1;
+}
+
+
+//Project specific styles
+
+//CSS Class
+.item.advanced-css {
+  background-color: #67DAB3;
+  background-image: linear-gradient(to bottom, rgba(#67DAB3, 0) 0%, rgba(#67DAB3, 0) 50%, rgba(#67DAB3, .7) 50%, rgba(#84EFCA, .7) 100%);
+  .background-image {
+    background-image: url("../images/advancedcss-sm.jpg");
+  }
+  &:after {
+    content: 'Back to Basics';
+  }
+}
+.item.design-system {
+  background-color: #f33b76;
+  background-image: linear-gradient(to bottom, rgba(#f33b76, 0) 0%, rgba(#f33b76, 0) 50%, rgba(#f33b76, .7) 50%, rgba(#ff6b9a, .7) 100%);
+  .background-image {
+    background-image: url("../images/designsystem-sm.jpg");
+  }
+  &:after {
+    content: 'D3 Data Viz';
+  }
+}
+.item.baracademy {
+  background-color: #8979C3;
+  background-image: linear-gradient(to bottom, rgba(#8979C3, 0) 0%, rgba(#8979C3, 0) 50%, rgba(#8979C3, .7) 50%, rgba(#BCACF5, .7) 100%);
+  .background-image {
+    background-image: url("../images/baracademy-sm.jpg");
+  }
+  &:after {
+    content: 'Baracademy 101';
+  }
+}
+.item.bluelaurel {
+  background-color: #06c4e8;
+  background-image: linear-gradient(to bottom, rgba(#06c4e8, 0) 0%, rgba(#06c4e8, 0) 50%, rgba(#06c4e8, .7) 50%, rgba(#8febfd, .7) 100%);
+  .background-image {
+    background-image: url("../images/bluelaurel-sm.jpg");
+  }
+  &:after {
+    content: 'Blue Laurel Health';
+  }
+}
+.item.romyoga {
+  background-color: #C6D046;
+  background-image: linear-gradient(to bottom, rgba(#C6D046, 0) 0%, rgba(#C6D046, 0) 50%, rgba(#C6D046, .7) 50%, rgba(#F99F49, .7) 100%);
+  background-image: linear-gradient(to bottom, rgba(#C6D046, 0) 0%, rgba(#C6D046, 0) 50%, rgba(#C6D046, .7) 50%, rgba(#E1EA68, .7) 100%);
+  .background-image {
+    background-image: url("../images/romyoga-sm.jpg");
+  }
+  &:after {
+    content: 'Romyoga';
+  }
+}

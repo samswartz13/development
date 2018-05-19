@@ -1,0 +1,22 @@
+{
+  "romyoga": {
+    "title": "Romyoga",
+    "description": "",
+    "link": "http://romyoga.com/"
+  },
+  "advancedCss": {
+    "title": "Teaching Advanced CSS",
+    "description": "",
+    "link": "http://sam-swartz.com/advancedCSS/basics.html"
+  },
+  "barAcademy": {
+    "title": "Bar Academy 101",
+    "description": "",
+    "link": "http://www.baracademy101.com/"
+  },
+  "ineek": {
+    "title": "iNeek",
+    "description": "",
+    "link": "http://ineek.eu/"
+  }
+}

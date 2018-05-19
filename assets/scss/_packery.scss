@@ -1,23 +1,12 @@
-$packery-width: calc(100% - 350px);
+
 body {
 	height: 100%;
 	height: 100vh;
 	width: 100%;
 	width: 100vw;
-	overflow: hidden;
 	background-color: #f1f1f1;
 }
-.wrapper {
-	background-color: #f1f1f1;
-	width: $packery-width;
-	float:right;
-	display: inline-block;
-	height: 100%; //fallback
-	height: 100vh;
-	overflow: hidden;
-	box-sizing: border-box;
-	padding: 10px; //matches packery gutter
-}
+
 
 .tile-title {
 	transition: all .3s ease-in-out;
@@ -36,47 +25,19 @@ body {
 }
 
 .item {
-	width: calc(50% - 7.5px);
-	// min-width: 550px;
-	// height: 200px;
-	height: calc(50% - 7.5px);
+  flex-grow: 1;
+  height:100%;
 	overflow: hidden;
-	// height: 338px;
 	background-image: linear-gradient(to bottom, rgba(#ff7c00, 0) 0%, rgba(#ff7c00, 0) 50%, rgba(#ffa73d, .7) 50%, rgba(#ffc27c, .7) 100%);
 	background-color: #ff7c00;
 	background-size: 100% 200%;
 	background-position: top center;
-	// transition: width 100ms linear, height 100ms linear 150ms, transform 0ms linear 100ms;
 	transform: translate3d(0, 0, 0);
 	&:hover {
 		background-position: bottom center;
 	}
-	&.full-screen {
-		transform: translate3d(0, 0, 200px);
-		width: 100%;
-		height: 100%;
-		z-index: 100;
-		// transition: transform 0ms linear;
-		// height: 100vh;
-		// z-index: 1000;
-		// pointer-events: none;
-		// background-position: center top;
-		// background-size: auto 290px;
-		// &:before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: 0;
-		// 	width: 100px;
-		// 	height: 100px;
-		// 	background-color: red;
-		// 	pointer-events: auto;
-		// }
-		// .content {
-		// 	transition: transform .3s cubic-bezier(0.1,0.28,.7,.89) .2s, opacity .25s linear .2s;
-		// 	display: block;
-		// 	transform: translateY(0);
-		// 	opacity: 1;
-		// }
-	}
+}
+
+a.clickable {
+  cursor: pointer;
 }

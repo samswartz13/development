@@ -1,0 +1,37 @@
+aside {
+  background-color: #fbfbfb;
+  max-width: 350px;
+}
+
+.personal-info {
+  &--name {
+    opacity: 0;
+    animation: easing .7s cubic-bezier(0.1,0.28,0.59,.87) forwards;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 45px;
+    font-weight: 200;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  &--title {
+    opacity: 0;
+    font-weight: 200;
+    animation: fade-in .7s ease-out forwards .6s;
+  }
+  &--social {
+    margin-left: -15px;
+  }
+}
+
+.horizontal-divider {
+  width: 20%;
+  // margin: 0 auto;
+  height: 1px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #ccc;
+}
+
+
