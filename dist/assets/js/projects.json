@@ -18,5 +18,14 @@
     "title": "iNeek",
     "description": "",
     "link": "http://ineek.eu/"
-  }
+  },
+  "projects": [
+    {
+      "name": "Blue Laurel Health",
+      "img": "",
+      "role": "Frontend Lead & Architect, and UX Designer",
+      "description": "When I was presented with the opportunity to work on Blue Laurel, I couldn't turn it down. The technology was cutting edge, and it was one of those projects where you could really believe in the cause. We were looking to build an app that would ",
+      "technology": "Angular 4, ng-cli, Webpack, Docker"
+    }
+  ]
 }

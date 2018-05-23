@@ -8,7 +8,7 @@
   <meta name="keywords" content="Samantha Swartz,Sam Swartz,Senior UX Developer, User Experience, UX, Developer, SASS, CSS">
   <meta name="author" content="Samantha Swartz">
   <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="flex--container" id="body">
@@ -24,12 +24,12 @@
       <div class="personal-info--social">
         <span class="btn">
           <a target="_blank" href="https://www.linkedin.com/in/samantha-swartz-b594173a">
-            <i class="fa fa-linkedin"></i>
+            <i class="fab fa-linkedin-in"></i>
           </a>
         </span>
         <span class="btn">
           <a target="_blank" href="http://codepen.io/samswartz/">
-            <i class="fa fa-codepen"></i>
+            <i class="fab fa-codepen"></i>
           </a>
         </span>
         
@@ -146,29 +146,30 @@
   <div class="modal" id="modal">
     <div class="modal--bg" id="modalBg"></div>
     <div class="modal--body">
-      <div class="modal--body--img">
-        <div class="modal--body--img--screen" id="modalImg"></div>
-      </div>
+      <div class="modal--body--img" id="modalImg"></div>
       <div class="modal--body--content">
+        <div class="modal--close" id="modalClose"></div>
         <div class="modal--body--content--header">
-          <h2 class="modal--body--header--title" id="modalTitle">Title of project</h2>
-          <h3 class="modal--body--header--rolw" id="modalRole">What my role was</h3>
+          <div class="modal--body--content--text">
+            <h2 id="modalTitle">Title of project</h2>
+            <h3 id="modalRole">What my role was</h3>
+          </div>
         </div>
+        
         <div class="modal--body--content--description">
           <p id="modalDescription"></p>
+          <p class="modal--body--content--description--tech">Technology</p>
           <p id="modalTechnology"></p>
         </div>
       </div>
       
-      <div class="modal--close" id="modalClose">
-        <i class="fa fa-close"></i>
-      </div>
+      
     </div>
 
     
   </div>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script-compiled.js"></script>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

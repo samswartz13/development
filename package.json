@@ -4,8 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run watch\" \"live-server\"",
-    "scss": "node-sass -o assets/css assets/scss/styles.scss && autoprefixer",
+    "start": "concurrently --kill-others \"npm run watch\" \"live-server --host=192.168.86.166\"",
+    "scss": "node-sass -o assets/css assets/scss/styles.scss && npm run autoprefixer",
     "autoprefixer": "postcss -u autoprefixer -r assets/css/*",
     "cssmin": "cleancss -o assets/css/styles.min.css assets/css/styles.css",
     "uglify": "uglifyjs -o assets/js/script.min.js assets/js/script-compiled.js",
@@ -16,6 +16,7 @@
     "build:img": "npm run imagemin",
     "build:clean": "del dist/*",
     "build:copy": "copyfiles  -e 'assets/scss/**/*.*' -e 'assets/images/**/*.*' 'assets/**/*.*' index.html favicon.ico dist/",
+    "build:serve": "live-server --open 'dist/'",
     "build": "npm run build:clean && npm run build:css && npm run build:js && npm run build:img && npm run build:copy",
     "watch:css": "onchange 'assets/scss/**/*.scss' -- npm run scss",
     "watch:js": "onchange 'assets/js/script.js' -- npm run compilejs",

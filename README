@@ -8,3 +8,9 @@ Set up development environment
 	a) If this doesn't work install Bower globally:		npm install -g bower
 5. Run gulp: this should open new tab, start up browsersync and start watching your files
 6. To create a deployable build - Run gulp build in a new terminal tab
+
+#TODO
+- Dist index.html file doesn't automatically switch over to minified files
+- FTP is messy - need to setup automatic FTP up to files
+- Have no way to check build file - need to add a run from build script
+- Merge current branch back into master
