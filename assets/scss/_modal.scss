@@ -32,11 +32,9 @@ body.locked {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    top: 30px;
+    top: 0px;
     right: 0px;
     position: absolute;
-    align-items: center;
-    justify-content: center;
     &:after {
       content: '';
       display: block;
@@ -45,6 +43,8 @@ body.locked {
       background-color: #9a9a9a;
       transform: rotate(45deg);
       position: absolute;
+      top: 25px;
+      right: 12.5px;
     }
     &:before {
       content: '';
@@ -54,6 +54,8 @@ body.locked {
       background-color: #9a9a9a;
       transform: rotate(-45deg);
       position: absolute;
+      top: 25px;
+      right: 12.5px;
     }
   }
   &--bg {

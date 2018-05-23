@@ -1,16 +1,20 @@
 README
-Set up development environment
 
-1. Navigate to project file in terminal:	cd myfile/myProject
+
+# Set up development environment
+1. Navigate to project file in terminal
 2. Pull down repo into this project file
 3. Run npm install
-4. Run bower install
-	a) If this doesn't work install Bower globally:		npm install -g bower
-5. Run gulp: this should open new tab, start up browsersync and start watching your files
-6. To create a deployable build - Run gulp build in a new terminal tab
+4. Run npm start
+
+# Build project
+1. npm run build
+
+## Serve build locally
+1. npm run build:serve 
+
+## Deploy build
+1. Update the deploy.js node file with the appropriate FTP credentials
+2. npm run build:deploy
 
 #TODO
-- Dist index.html file doesn't automatically switch over to minified files
-- FTP is messy - need to setup automatic FTP up to files
-- Have no way to check build file - need to add a run from build script
-- Merge current branch back into master

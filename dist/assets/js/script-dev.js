@@ -1,7 +1,11 @@
-(function (){ 
-  'use strict'
+"use strict";
 
-  const projects = {
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+(function () {
+  'use strict';
+
+  var projects = {
     blueLaurel: {
       title: "Blue Laurel Health",
       grad: {
@@ -41,10 +45,10 @@
       role: "Frontend Developer, UX Designer",
       description: "Rob, the owner of BarAcaemy 101 approached me to design and build a custom website for his beer and wine tasting business. As a freelance project, I developed and designed his site. Since it's small, I opted to write it in plain JS rather then to pull in a framework.",
       technology: "HTML5, Javascript (ES5), CSS3, Gulp, Browsersync"
-    },
-  }
+    }
+  };
 
-  let elements = {
+  var elements = {
     tiles: document.getElementsByClassName('clickable'),
     htmlBody: document.getElementById('body'),
     modal: document.getElementById('modal'),
@@ -55,46 +59,46 @@
     description: document.getElementById('modalDescription'),
     technology: document.getElementById('modalTechnology'),
     img: document.getElementById('modalImg')
-  }
+  };
 
+  elements.close.addEventListener('click', function () {
+    closeModal();
+  });
+  elements.bg.addEventListener('click', function () {
+    closeModal();
+  });
 
-  elements.close.addEventListener('click', () => { closeModal() })
-  elements.bg.addEventListener('click', () => { closeModal() })
-
-  let closeModal = () => {
+  var closeModal = function closeModal() {
     elements.modal.classList.remove("active");
     elements.htmlBody.classList.remove("locked");
   };
 
-  let init = function(tiles) {
-    
-    [...tiles].forEach(tile => {
-      let id = tile.id;
+  var init = function init(tiles) {
 
-      tile.addEventListener('click', () => {
+    [].concat(_toConsumableArray(tiles)).forEach(function (tile) {
+      var id = tile.id;
+
+      tile.addEventListener('click', function () {
 
         elements.htmlBody.classList.add("locked");
         elements.modal.classList.add("active");
         populateModal(id);
-        
       });
     });
-  }
+  };
 
-  let populateModal = function(id) {
-    let laptopImg = `url('assets/images/${id}-laptop.png'),`;
-    let gradientImg = `linear-gradient(to bottom left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, ${projects[id].grad.dk} 50%, ${projects[id].grad.lt} 100%)`;
+  var populateModal = function populateModal(id) {
+    var laptopImg = "url('assets/images/" + id + "-laptop.png'),";
+    var gradientImg = "linear-gradient(to bottom left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, " + projects[id].grad.dk + " 50%, " + projects[id].grad.lt + " 100%)";
 
     elements.title.innerText = projects[id].title;
     elements.role.innerText = projects[id].role;
     elements.img.style.backgroundImage = laptopImg + gradientImg;
     elements.description.innerText = projects[id].description;
     elements.technology.innerText = projects[id].technology;
+  };
 
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     init(elements.tiles);
   });
-
-}())
+})();
